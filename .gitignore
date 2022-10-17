@@ -1,0 +1,4 @@
+venv/
+helloworld/helloworld/__pycache__/
+helloworld/initialization/__pycache__/
+helloworld/initialization/migrations/__pycache__/
