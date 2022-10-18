@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from initialization.views import index
+from initialization.views import index, page404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', index, name='home'),
     path('initialization/', include('initialization.urls')), 
 ]
+
+handler404 = page404
