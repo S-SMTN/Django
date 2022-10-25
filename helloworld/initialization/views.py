@@ -1,5 +1,15 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView
+
+from .models import *
+
+menu = [{'title': "Розділ 1", 'url_name': 'section-1'},
+        {'title': "Розділ 2", 'url_name': 'section-2'},
+        {'title': "Розділ 3", 'url_name': 'section-3'},
+        {'title': "Увійти", 'url_name': 'login'},
+        {'title': "Зареєструватися", 'url_name': 'register'},
+]
 
 # Create your views here.
 def index(request):
